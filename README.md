@@ -12,5 +12,5 @@ Disclaimer : Those were made to try stuff out, and thus probably don't follow th
 [link](https://damnalex.github.io/MiniWebProjects/questionnablecontentRecovery.html)  <br>
 (If you like questionnable content, please go read it on [the official site](https://www.questionablecontent.net), so Jeph gets the ad revenue, thanks ;-) )
 
- - A list of pokemons, with a big and a small image:
+ - A list of all the pokemons, with a big and a small image:
 [link](https://damnalex.github.io/MiniWebProjects/recover%20Pokemon%20images.html)
