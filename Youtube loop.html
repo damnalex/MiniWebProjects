@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<h2>Youtube looper</h2>
+
+<p>Put link to video here (just the video id ).</p>
+<input type="text" id="link" >
+<p>Put loop start time (format mm:ss).</p>
+<input type="text" id="minutes" value="0"> m :
+<input type="text" id="secondes" value="0"> sec <br>
+<p> put loop duration here (in secondes)</p>
+<input type="text" id="loop">
+
+<button id="play">Click me to confirm</button>
+
+<div id="vidContainer"></div>
+
+<script>
+	var timerID = 0;
+	$("#play").click(function (){
+		makevid();
+	});
+
+	function makevid(){
+		$("#vidContainer").html('');
+		$("#vidContainer").append('<iframe width="420" height="315" src="https://www.youtube.com/embed/' 
+									+ $("#link").val() + '?start=' + ( parseInt($("#minutes").val())*60 + parseInt($("#secondes").val()) )  + '&autoplay=1' 
+									+ '"> </iframe>');
+		//$("#vidContainer").append('test');
+		setTimeout( function (){ makevid(); }  , parseInt($("#loop").val())*1000);
+	}
+</script>
+
+
+</body>
+</html>

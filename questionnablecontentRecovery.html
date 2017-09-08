@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+
+<h2>Questionnable content comics content</h2>
+
+<p>Start On (comic ID)</p>
+<input type="text" id="start" value="1">
+<p>Number on comic to show</p>
+<input type="text" id="nbr" value="10"> 
+
+<br><button id="play">Click me to confirm</button>
+
+<div id="comicsContainer"></div>
+
+
+<script>
+	var timerID = 0;
+	$("#play").click(function (){
+		makeComicsList( parseInt($("#start").val()), parseInt($("#nbr").val()) );
+	});
+
+	function makeComicsList( startID , nbrToShow ){
+		$("#comicsContainer").html('');
+		var inlineErrorBrokenLink = " onerror='$(this).hide();'";
+		
+		for (var i = 0; i < nbrToShow ; i++) {
+			$("#comicsContainer").append(  "n°" + (startID + i) + " :<br>" );
+			
+			$("#comicsContainer").append('<img src="' + 'http://www.questionablecontent.net/comics/' + (startID + i) + '.png" ' + inlineErrorBrokenLink + '>' + '<br>' );
+			$("#comicsContainer").append('<img src="' + 'http://www.questionablecontent.net/comics/' + (startID + i) + '.jpg" ' + inlineErrorBrokenLink + '>' + '<br>' );
+			$("#comicsContainer").append('<img src="' + 'http://www.questionablecontent.net/comics/' + (startID + i) + '.gif" ' + inlineErrorBrokenLink + '>' + '<br>' );
+			
+		}
+		
+		$("#comicsContainer").append( '<button id="previous">previous ' + nbrToShow + '</button> ');
+		$("#comicsContainer").append( '<button id="next">next ' + nbrToShow + '</button>');
+		$("#previous").click(function(){
+			makeComicsList( startID - nbrToShow , nbrToShow );
+			window.scrollTo(0,0);
+		});
+		$("#next").click(function (){
+			makeComicsList( startID + nbrToShow , nbrToShow );
+			window.scrollTo(0,0);
+		});
+		
+		
+		
+	};
+</script>
+
+
+
+</body>
+</html>
