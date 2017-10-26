@@ -2,7 +2,7 @@
 
 This is a little collection of the simple one-page projects I made.
 
-Disclaimer : Those were made to try stuff out, and thus probably don't follow the rules of clean code or wathever else. Do what you want with those, but don't consider it as good craftsmanship...
+Disclaimer : Those were made to try stuff out, and thus probably don't follow the rules of clean code or whatever else. Do what you want with those, but don't consider it as good craftsmanship...
 
 
  - Make a youtube vidéo loop, with start timestamp and length of loop:
