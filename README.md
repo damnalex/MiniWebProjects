@@ -1,3 +1,7 @@
+# This repo has been declared a disaster zone
+
+This repo has shit code. It is only kept here as a reminder of the progress I've made since.
+
 # MiniWebProjects
 
 This is a little collection of the simple one-page projects I made.
